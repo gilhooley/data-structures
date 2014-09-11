@@ -20,7 +20,7 @@ var stackMethods = {
   pop: function() {
   	this.sizea && this.sizea--;
   	var result = this.storage[this.sizea];
-
+	  delete this.storage[this.sizea];
   	return result;
   },
 
