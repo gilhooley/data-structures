@@ -1,8 +1,6 @@
 var makeStack = function() {
-  // Hey! Rewrite in the new style. Your code will wind up looking very similar,
-  // but try not not reference your old code in writing the new style.
+
   var newStack = Object.create(stackMethods);
-  //console.log(newStack);
   newStack.sizea = 0;
   newStack.storage = Object.create(Object.prototype);
   return newStack;

@@ -1,3 +1,11 @@
+// HALP
+// Understand structure of test suites
+// Where do our test functions go?
+// What are the boundaries of a test suite?
+// Should we test one method at a time, and comment out the other three?
+// What are the mechanics of profiler (this should be straightforward, or look back at CodeSchool's DevTools course)
+//  and which profiler is relevant here, or both?
+
 window.variant = document.location.search.slice(1);
 
 define([
