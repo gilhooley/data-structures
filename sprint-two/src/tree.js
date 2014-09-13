@@ -3,7 +3,8 @@ var extend = function(a,b) {
     a[key] = b[key];
   }
   return a;
-}
+};
+
 var makeTree = function(value){
   var newTree = {};
   newTree.value = value; 
