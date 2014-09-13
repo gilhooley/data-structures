@@ -41,18 +41,21 @@ var bstMethods = {
   },
 
   contains: function(value) {
-    // if parent node === value, return true
-    // else if parent node < value, parent.left.contains(value)
-    // else parent.right.contains(value)
-
     if (this.value === value) {return true;}
     else if (value < this.value && this.left.value) { var that = this.left; return that.contains(value); }
     else if (value > this.value && this.right.value) { var that = this.right; return that.contains(value); }
     return false;
   },
 
-  depthFirstLog: function() {}
-    // review function binding slides
+  depthFirstLog: function(fnc) {
+    if (this.value) { fnc(this.value); }
+    for (var key in this) {
+      if (this[key].value) {
+        this[key].depthFirstLog(fnc);
+      }
+    }
+  }
+     
 };
 
 /*
