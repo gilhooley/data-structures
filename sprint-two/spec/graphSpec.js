@@ -15,6 +15,13 @@ describe('graph', function() {
     expect(graph.removeEdge).to.be.a("function");
   });
 
+  it('should insert values', function() {         // isolate addNode for testing
+    graph.addNode('puppies');
+    graph.addNode('kittens', 'puppies');
+      console.log(graph);
+    expect(graph.sizeish).to.equal(2);
+  });
+
   it('should store values as nodes that were inserted', function() {
     graph.addNode('kittens');
     graph.contains('kittens');
