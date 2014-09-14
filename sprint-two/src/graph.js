@@ -70,9 +70,10 @@ Graph.prototype.removeEdge = function(fromNode, toNode){
   };
 
   Graph.prototype.forEachNode = function(fnc) {
-    for (var key in this) {
-       fnc(this[key]);
-    }
+    // review function binding!
+    // for (var key in this) {
+    //    fnc(this[key]);
+    // }
   };
 };
 
